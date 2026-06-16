@@ -64,7 +64,7 @@ section{
 
     align-items:center;
 
-    padding:18px 6%;
+    padding:18px 2%;
 
     background:rgba(10,10,20,.88);
 
@@ -101,6 +101,9 @@ section{
     gap:14px;
 
     flex-wrap:nowrap;
+
+    margin-left:auto;
+    margin-right:40px;
 
 }
 
