@@ -66,7 +66,7 @@ section{
 
     padding:18px 2%;
 
-    background:rgba(10,10,20,.88);
+    background:rgba(255,255,255,.92);
 
     backdrop-filter:blur(20px);
 
@@ -74,7 +74,7 @@ section{
 
     overflow:visible;
 
-    border-bottom:1px solid rgba(255,255,255,.05);
+    border-bottom:1px solid #dbeafe;
 
 }
 
@@ -84,7 +84,7 @@ section{
 
     font-weight:800;
 
-    color:white;
+    color:#2563eb;
 
     flex-shrink:0;
 
@@ -109,7 +109,7 @@ section{
 
 .nav-links a{
 
-    color:white;
+    color:#111827;
 
     font-size:.92rem;
 
@@ -143,14 +143,18 @@ section{
 
     padding:150px 8% 100px;
 
-    background:
-    radial-gradient(circle at top left,
-    rgba(124,77,255,.35),
-    transparent 40%),
-
-    radial-gradient(circle at bottom right,
-    rgba(180,140,255,.25),
-    transparent 40%);
+   background:
+   radial-gradient(
+   circle at top left,
+   rgba(59,130,246,.15),
+   transparent 40%
+   ),
+   
+   radial-gradient(
+   circle at bottom right,
+   rgba(147,197,253,.2),
+   transparent 40%
+   );
 }
 
 .hero-content{
@@ -232,7 +236,9 @@ section{
 }
 
 .secondary-btn:hover{
-    background:rgba(255,255,255,.05);
+    background:white;
+border:1px solid #dbeafe;
+box-shadow:0 8px 25px rgba(59,130,246,.08);
 }
 
 /* =========================
@@ -249,7 +255,9 @@ section{
 }
 
 .stat-card{
-    background:rgba(255,255,255,.05);
+    background:white;
+border:1px solid #dbeafe;
+box-shadow:0 8px 25px rgba(59,130,246,.08);
 
     border-radius:20px;
 
@@ -289,7 +297,9 @@ section{
 }
 
 .achievement-box{
-    background:rgba(255,255,255,.05);
+    background:white;
+border:1px solid #dbeafe;
+box-shadow:0 8px 25px rgba(59,130,246,.08);
 
     border-radius:18px;
 
@@ -329,7 +339,7 @@ section{
 
     font-weight:700;
 
-    color:white;
+    color:#111827;
 
     padding:24px;
 
@@ -337,7 +347,8 @@ section{
 
     border-radius:14px;
 
-    background:rgba(255,255,255,.06);
+    background:white;
+border:1px solid #dbeafe;
 
     transition:.3s;
 }
@@ -354,7 +365,7 @@ section{
 
     padding:25px;
 
-    background:rgba(255,255,255,.03);
+    background:#f8fbff;
 
     border-radius:0 0 14px 14px;
 
@@ -384,7 +395,9 @@ section{
 }
 
 .feature-card{
-    background:rgba(255,255,255,.05);
+    background:white;
+border:1px solid #dbeafe;
+box-shadow:0 8px 25px rgba(59,130,246,.08);
 
     padding:30px;
 
@@ -427,7 +440,9 @@ section{
 }
 
 .pricing-card{
-    background:rgba(255,255,255,.05);
+    background:white;
+border:1px solid #dbeafe;
+box-shadow:0 8px 25px rgba(59,130,246,.08);
 
     padding:30px;
 
@@ -526,7 +541,9 @@ section{
 }
 
 .contact-card{
-    background:rgba(255,255,255,.05);
+    background:white;
+border:1px solid #dbeafe;
+box-shadow:0 8px 25px rgba(59,130,246,.08);
 
     border-radius:20px;
 
@@ -555,7 +572,8 @@ section{
 ========================= */
 
 footer{
-    background:#05050a;
+    background:#eaf4ff;
+    border-top:1px solid #dbeafe;
     padding:60px 8%;
     text-align:center;
 }
@@ -740,7 +758,9 @@ footer{
 
     padding:30px;
 
-    background:rgba(255,255,255,.05);
+    background:white;
+border:1px solid #dbeafe;
+box-shadow:0 8px 25px rgba(59,130,246,.08);
 
     border-radius:20px;
 
