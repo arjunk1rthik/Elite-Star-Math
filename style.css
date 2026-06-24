@@ -1038,3 +1038,114 @@ footer{
         grid-template-columns: 1fr;
     }
 }
+/* =========================
+   PRICING REDESIGN
+========================= */
+
+.pricing-hero-card {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 50px 45px;
+    text-align: center;
+    border: 2px solid rgba(124, 77, 255, .25);
+    box-shadow: 0 10px 40px rgba(124, 77, 255, .08);
+}
+
+.pricing-badge {
+    display: inline-block;
+    background: rgba(124, 77, 255, .12);
+    border: 1px solid rgba(124, 77, 255, .35);
+    color: #7c4dff;
+    font-size: .8rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.pricing-hero-card h3 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: #111111;
+}
+
+.pricing-desc {
+    color: #555555;
+    max-width: 520px;
+    margin: 0 auto 32px auto;
+    line-height: 1.7;
+}
+
+.pricing-features-row {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.pricing-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(124, 77, 255, .07);
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: .9rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+.pricing-feature i {
+    color: #a48aff;
+    font-size: .95rem;
+}
+
+.pricing-amount {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.price-original {
+    font-size: 2rem;
+    color: #bbbbbb;
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.price-discounted {
+    font-size: 3.4rem;
+    font-weight: 900;
+    color: #a48aff;
+}
+
+.price-period {
+    font-size: 1rem;
+    color: #999999;
+    font-weight: 500;
+}
+
+.pricing-savings {
+    color: #7c4dff;
+    font-size: .9rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 950px) {
+    .pricing-hero-card {
+        padding: 36px 24px;
+    }
+
+    .price-discounted {
+        font-size: 2.6rem;
+    }
+}
