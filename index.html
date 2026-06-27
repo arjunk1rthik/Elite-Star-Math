@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,14 +90,11 @@ online, and start on July 6th. Learn more below.
 
 <div class="hero-buttons">
 
-<a
-href="https://forms.gle/xmk7fAmnVZjSthEw5"
-target="_blank"
-class="primary-btn">
+<button type="button" class="primary-btn open-signup-modal">
 
 Free Trial Session
 
-</a>
+</button>
 
 <a
 
@@ -447,9 +443,9 @@ Don't let summer learning loss hold your child back! Our intensive one-month Sum
 
   <p class="pricing-savings">You save $75.01 — limited-time July rate</p>
 
-  <a href="https://forms.gle/xmk7fAmnVZjSthEw5" target="_blank" class="primary-btn">
+  <button type="button" class="primary-btn open-signup-modal">
     Enroll for July
-  </a>
+  </button>
 
 </div>
 
@@ -706,14 +702,11 @@ Meet Arjun, discuss your goals, evaluate current skill levels, and experience a 
 
 </p>
 
-<a
-href="https://forms.gle/xmk7fAmnVZjSthEw5"
-target="_blank"
-class="primary-btn">
+<button type="button" class="primary-btn open-signup-modal">
 
 Schedule Free Trial
 
-</a>
+</button>
 
 </div>
 
@@ -806,14 +799,11 @@ Email Elite Star Math
 
 </a>
 
-<a
-href="https://forms.gle/xmk7fAmnVZjSthEw5"
-target="_blank"
-class="secondary-btn">
+<button type="button" class="secondary-btn open-signup-modal">
 
 Sign Up Now
 
-</a>
+</button>
 
 </div>
 
@@ -870,7 +860,135 @@ All Rights Reserved.
 
 </footer>
 
-<script src="script.js?v=6"></script>
+<!-- =============================================
+     SIGNUP MODAL
+============================================= -->
+
+<div class="modal-overlay" id="signup-modal-overlay">
+
+<div class="modal-box" id="signup-modal-box">
+
+<button class="modal-close" id="signup-modal-close" aria-label="Close form">
+<i class="fas fa-times"></i>
+</button>
+
+<div id="signup-form-view">
+
+<div class="modal-header">
+
+<h2><i class="fas fa-graduation-cap"></i> Enroll at Elite Star Math</h2>
+
+<p class="modal-intro">
+Our Summer Math Bootcamp runs <strong>July 6th through July 31st</strong>.
+Fill out the form below to reserve your child's spot. Looking for a level
+that isn't listed below — like 1B, 2B, 3B, etc.? Just reach out to us at
+<a href="mailto:contact@elitestarmath.com">contact@elitestarmath.com</a>
+and we'll get you set up. After you submit this form, Elite Star Math will
+reach out to you with payment details and class details.
+</p>
+
+</div>
+
+<form id="signup-form">
+
+<div class="form-group">
+<label for="parent-name">Parent Name</label>
+<input type="text" id="parent-name" name="parentName" required>
+</div>
+
+<div class="form-group">
+<label for="parent-email">Parent Email</label>
+<input type="email" id="parent-email" name="parentEmail" required>
+</div>
+
+<div class="form-group">
+<label for="student-name">Student Name</label>
+<input type="text" id="student-name" name="studentName" required>
+</div>
+
+<div class="form-group">
+<label for="student-grade">Student Grade / Class Preferred</label>
+<select id="student-grade" name="studentGrade" required>
+<option value="">— Select a level —</option>
+<option value="1A">1A — 1st Grade</option>
+<option value="2A">2A — 2nd Grade</option>
+<option value="3A">3A — 3rd Grade</option>
+<option value="4A">4A — 4th Grade</option>
+<option value="5A">5A — 5th Grade</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="schedule-option">Option Preferred</label>
+<select id="schedule-option" name="scheduleOption" required>
+<option value="">— Select an option —</option>
+<option value="1">Option 1 — Mon / Wed / Fri</option>
+<option value="2">Option 2 — Mon / Tue / Thu</option>
+<option value="3">Option 3 — Mon / Tue / Wed</option>
+<option value="4">Option 4 — Mon / Tue / Fri</option>
+<option value="5">Option 5 — Mon / Wed / Thu</option>
+<option value="6">Option 6 — Mon / Thu / Fri</option>
+<option value="7">Option 7 — Tue / Wed / Thu</option>
+<option value="8">Option 8 — Tue / Wed / Fri</option>
+<option value="9">Option 9 — Tue / Thu / Fri</option>
+<option value="10">Option 10 — Wed / Thu / Fri</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Do you want a free trial?</label>
+<div class="radio-row">
+<label class="radio-pill">
+<input type="radio" name="wantsTrial" value="yes" required>
+<span>Yes</span>
+</label>
+<label class="radio-pill">
+<input type="radio" name="wantsTrial" value="no" required>
+<span>No</span>
+</label>
+</div>
+</div>
+
+<div class="form-group trial-datetime-group" id="trial-datetime-group">
+
+<label for="trial-date">Date of Free Trial</label>
+<select id="trial-date" name="trialDate">
+<option value="">— Select a date —</option>
+</select>
+
+<label for="trial-time" class="trial-time-label">Time of Free Trial</label>
+<select id="trial-time" name="trialTime">
+<option value="">— Select a time —</option>
+</select>
+
+</div>
+
+<button type="submit" class="primary-btn modal-submit-btn">Submit</button>
+
+</form>
+
+</div>
+
+<div id="signup-success-view" class="signup-success">
+
+<i class="fas fa-circle-check"></i>
+
+<h2>Response Saved!</h2>
+
+<p>
+Thanks for signing up — Elite Star Math will reach out to you soon
+with payment details and class information.
+</p>
+
+<button class="primary-btn" id="signup-success-close">Close</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js?v=7"></script>
 
 </body>
 
