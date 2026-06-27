@@ -586,7 +586,7 @@ wantsTrialRadios.forEach(radio => {
 // your own endpoint from the Formspree dashboard
 // (it looks like "https://formspree.io/f/abcdwxyz").
 // =========================
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaqgjqkj";
 
 // Handle form submission
 if (signupForm) {
