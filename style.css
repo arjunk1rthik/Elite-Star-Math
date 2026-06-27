@@ -182,6 +182,16 @@ section{
     font-weight:700;
 
     transition:.3s;
+
+    border:none;
+
+    background-color:transparent;
+
+    cursor:pointer;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:1rem;
 }
 
 .primary-btn{
@@ -1122,4 +1132,238 @@ footer{
   font-weight: 800;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+/* =========================
+   SIGNUP MODAL
+========================= */
+
+.modal-overlay{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(20,12,40,.55);
+    backdrop-filter:blur(4px);
+    z-index:3000;
+    align-items:center;
+    justify-content:center;
+    padding:30px 16px;
+}
+
+.modal-overlay.active{
+    display:flex;
+}
+
+.modal-box{
+    position:relative;
+    width:100%;
+    max-width:560px;
+    max-height:88vh;
+    overflow-y:auto;
+    background:#ffffff;
+    border-radius:24px;
+    padding:45px 40px;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    animation:modalPop .3s ease;
+}
+
+@keyframes modalPop{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.97);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.modal-close{
+    position:absolute;
+    top:18px;
+    right:18px;
+    width:36px;
+    height:36px;
+    border:none;
+    border-radius:50%;
+    background:rgba(124,77,255,.1);
+    color:#7c4dff;
+    font-size:1rem;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.25s;
+}
+
+.modal-close:hover{
+    background:rgba(124,77,255,.2);
+}
+
+.modal-header h2{
+    font-size:1.6rem;
+    margin-bottom:14px;
+    color:#111111;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.modal-header h2 i{
+    color:#7c4dff;
+}
+
+.modal-intro{
+    color:#555555;
+    font-size:.92rem;
+    line-height:1.7;
+    margin-bottom:30px;
+    padding-bottom:25px;
+    border-bottom:1px solid rgba(124,77,255,.15);
+}
+
+.modal-intro a{
+    color:#7c4dff;
+    font-weight:600;
+}
+
+.form-group{
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    font-size:.88rem;
+    font-weight:700;
+    color:#333333;
+    margin-bottom:8px;
+}
+
+.form-group .trial-time-label{
+    margin-top:16px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select{
+    width:100%;
+    padding:13px 16px;
+    border-radius:12px;
+    border:2px solid rgba(124,77,255,.25);
+    background:#ffffff;
+    color:#111111;
+    font-family:'Inter',sans-serif;
+    font-size:.95rem;
+    transition:border-color .25s, box-shadow .25s;
+}
+
+.form-group select{
+    cursor:pointer;
+    appearance:none;
+    -webkit-appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237c4dff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 16px center;
+    padding-right:42px;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    outline:none;
+    border-color:#7c4dff;
+    box-shadow:0 0 0 3px rgba(124,77,255,.15);
+}
+
+.radio-row{
+    display:flex;
+    gap:12px;
+}
+
+.radio-pill{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:12px 16px;
+    border-radius:12px;
+    border:2px solid rgba(124,77,255,.25);
+    cursor:pointer;
+    font-weight:600;
+    color:#555555;
+    transition:.25s;
+}
+
+.radio-pill input{
+    accent-color:#7c4dff;
+}
+
+.radio-pill:has(input:checked){
+    border-color:#7c4dff;
+    background:rgba(124,77,255,.08);
+    color:#7c4dff;
+}
+
+.trial-datetime-group{
+    overflow:hidden;
+    max-height:0;
+    margin-bottom:0;
+    opacity:0;
+    transition:max-height .3s ease, opacity .3s ease, margin-bottom .3s ease;
+}
+
+.trial-datetime-group.open{
+    max-height:240px;
+    margin-bottom:20px;
+    opacity:1;
+}
+
+.modal-submit-btn{
+    width:100%;
+    text-align:center;
+    margin-top:10px;
+}
+
+.signup-success{
+    display:none;
+    text-align:center;
+    padding:30px 10px 10px;
+}
+
+.signup-success.active{
+    display:block;
+}
+
+.signup-success i{
+    font-size:3.2rem;
+    color:#4caf7d;
+    margin-bottom:18px;
+    display:block;
+}
+
+.signup-success h2{
+    margin-bottom:14px;
+    color:#111111;
+}
+
+.signup-success p{
+    color:#555555;
+    max-width:400px;
+    margin:0 auto 28px auto;
+}
+
+@media(max-width:600px){
+
+.modal-box{
+    padding:35px 22px;
+}
+
+.radio-row{
+    flex-direction:column;
+}
+
 }
